@@ -7,16 +7,16 @@
 Logar no equipamento
 
 Comando para logar em modo de configuração
-# conf
+#conf
 
 Comando para adicionar usuário
-# aaa user nomedousuário password suasenha
+#aaa user nomedousuário password suasenha
 
 Comando para altera senha de usuário
-# aaa user nomedousuário change-password novasenha
+#aaa user nomedousuário change-password novasenha
 
 Comando para deletar usuário
-# no aaa user nomedousuário 
+#no aaa user nomedousuário 
 
 
 
