@@ -32,4 +32,13 @@ show configuration running snmp
 
 show interface link gigabit-ethernet
 
+********** Configurar Servidor Telnet **********
+
+telnet server enable
+
+
+
+
+
+
 
