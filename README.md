@@ -134,6 +134,10 @@ service-port 1 gpon 1/1/1 onu 0 gem 1 match vlan vlan-id 1000 action vlan replac
 
 show interface gpon 1/1/1 onu 1 ethernet 1 brief
 
+############### Verificando quais vlans estão na interface ###############
+
+show dot1q vlan interface ten-gigabit-ethernet-1/1/4
+
 
 
 
