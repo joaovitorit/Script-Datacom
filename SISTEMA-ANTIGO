@@ -1,3 +1,46 @@
+# Script-Datacom Sistemas Antigo
+
+
+#################### CRIAR VLAN ####################
+
 ################ COMANDOS DO SISTEMA ANTIGO DA DATACOM ################
 
-Criar vlan no Switch 2104
+############ Criar vlan no Switch 2104 ############
+
+Vamos assumir em nosso exemplo a vlan 100.
+
+** Entrar no modo de configuração;
+
+$ configure
+
+** Acessar o diretório da vlan 100
+
+Intervace vlan 100
+
+** Inserir a interface 1/1 como membro tagged;
+
+config-if-vlan-100)# set-member tagged ethernet 1
+
+** É possível inserir uma range de interfaces 
+
+(config-if-vlan-100)#set-member tagged ethernet range 1/5 1/8
+
+Inserir a interface 4 como membro untagged;
+
+(config-if-vlan-100)#set-member untagged ethernet 4
+
+** Para interfaces untagged, deve-se informar que a vlan nativa é a vlan acima (em nosso caso a vlan 100);
+
+(config-if-vlan-100)# interface ethernet 4
+
+(config-if-eth4)# switchport native vlan 100
+
+(config-if-eth4)#exit
+
+** Não esqueça de Salvar as configurações
+
+# copy running-config startup-config
+
+URL DE REFERÊNCIA: https://k3gsolutions.freshdesk.com/support/solutions/articles/16000048263-datacom-criar-vlan
+
+
